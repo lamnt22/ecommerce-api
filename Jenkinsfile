@@ -17,8 +17,8 @@ pipeline {
         stage('Build Maven'){
             steps{
 	       sh 'mvn clean install'
+           sh 'sudo chmod -R 777 /var/www/ecommerce/api'
 	       sh 'cp -f ./target/*.jar /var/www/ecommerce/api'
-	       sh 'sudo chmod -R 777 /var/www/ecommerce/api'
             }
         }
         stage('Restart service'){
