@@ -24,8 +24,8 @@ pipeline {
         stage('Restart service'){
             steps{
                 script{
-                    sh 'sh /var/www/qrsite/api/ecommerce_api.sh stop'
-                    sh 'sh /var/www/qrsite/api/ecommerce_api.sh start'
+                    sh 'sh /var/www/ecommerce/api/ecommerce_api.sh stop'
+                    sh 'sh /var/www/ecommerce/api/ecommerce_api.sh start'
                 }
             }
         }
